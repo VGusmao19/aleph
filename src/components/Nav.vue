@@ -12,6 +12,8 @@
           <router-link class="nav-item nav-link active" to="/">SelectionSort</router-link>
           <router-link class="nav-item nav-link active" to="/BubbleSort">BubbleSort</router-link>
           <router-link class="nav-item nav-link active" to="/InsertionSort">InsertionSort</router-link>
+          <router-link class="nav-item nav-link active" to="/BuscaLinear">Busca Linear</router-link>
+          <router-link class="nav-item nav-link active" to="/BuscaBinaria">Busca Binaria</router-link>
         </div>
       </div>
     </nav> 

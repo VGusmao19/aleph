@@ -59,13 +59,13 @@
 
 
 export default {
-  name: "ModalConsultaPessoa",
+  name: "ModalConsultaBusca",
 
   data() {
     return {
       array:[4,3,2,1],
       // variavel para valor procurado
-      valorProcurado: 10
+      valorProcurado: 12
     };
   },
 

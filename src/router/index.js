@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import SelectionSortView from '../views/SelectionSortView.vue'
 import BubbleSortView from '../views/BubbleSortView.vue'
 import InsertionSortView from '../views/InsertionSortView.vue'
+import BuscaLinearView from '../views/BuscaLinearView.vue'
+import BuscaBinariaView from '../views/BuscaLinearView.vue'
 
 
 Vue.use(VueRouter)
@@ -24,6 +26,18 @@ const routes = [
     path: '/InsertionSort',
     name: 'InsertionSort',
     component: InsertionSortView,
+    meta: { transition: 'slide-left' },
+  },
+  {
+    path: '/BuscaLinear',
+    name: 'BuscaLinear',
+    component: BuscaLinearView,
+    meta: { transition: 'slide-left' },
+  },
+  {
+    path: '/BuscaBinaria',
+    name: 'BuscaBinaria',
+    component: BuscaBinariaView,
     meta: { transition: 'slide-left' },
   }
 ]
