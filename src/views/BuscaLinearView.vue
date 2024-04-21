@@ -2,7 +2,7 @@
     <div>
       
      
-         <ModalConsultaPessoa
+         <ModalConsulta
           v-show="isModalVisible"
           @closeModalCadastro="closeModal"
           @mandouArray="mandouArray"
@@ -75,7 +75,7 @@
       </div>
       </transition>
       
-      <input  v-show="!ordenou" @click="insertionSort" type="submit" class="btn btn-primary mr-2" data-toggle="button" value="Buscar"/>
+      <input  v-show="!ordenou" @click="buscaLinear" type="submit" class="btn btn-primary mr-2" data-toggle="button" value="Buscar"/>
       <input v-show="ordenou" @click="reverter" type="submit" class="btn btn-primary mr-2" data-toggle="button" value="Reverter"/>
       <input v-show="ordenou" @click="pausar" type="submit" class="btn btn-primary mr-2" data-toggle="button" value="Pausar/Continuar"/>
       <!-- <button @click="selectionSort">Ordenar</button> -->
@@ -95,13 +95,13 @@
     
     gsap.registerPlugin(TextPlugin);
     
-    import ModalConsultaPessoa from "../components/Modais/ModalCreateArray.vue"
+    import ModalConsulta from "../components/Modais/ModalSearch.vue"
     import Vue from 'vue'
     
     var tl = gsap.timeline()
     
     export default {
-      components: {  ModalConsultaPessoa },
+      components: {  ModalConsulta },
       name: 'HomeView',
       data(valorProcurado) {
         return {
@@ -164,7 +164,7 @@
             }
             console.log("elementos "+this.elementos)
             console.log("oredenados "+this.oredenados)
-            // this.sort(this.oredenados)
+            this.sort(this.oredenados)
             // evitando bug, aqui o algoritmo ordena antes da animação
             console.log("elementos "+this.elementos)
             console.log("oredenados "+this.oredenados)
@@ -189,14 +189,14 @@
 
        
         
-        insertionSort() {
+        buscaLinear() {
         this.ordenou=true
-        tl.set("#bordacodigo",{scale: 1.2})
+        tl.set("#bordacodigo",{scale: 1.0})
         tl.to( "#bordacodigo", { y:-41.6666666667*5.5  });//controle da linha que le o codigo
         tl.to( "#bordacodigo", { y:-41.6666666667*4.5  });//controle da linha que le o codigo
-        // for (var i = 0; i < this.elementos.length; i++) {
-        //   gsap.set(`#box${this.oredenados.indexOf(this.elementos[i])}` ,{ x: (i-this.oredenados.indexOf(this.elementos[i]))*100});
-        // }//esse for é a primeira animação e é responsaável por desordenar o vetor mostrado na tela. multiplicado por 100, que é a largura do elemento HTML
+        //  for (var i = 0; i < this.elementos.length; i++) {
+        //    gsap.set(`#box${this.oredenados.indexOf(this.elementos[i])}` ,{ x: (i-this.oredenados.indexOf(this.elementos[i]))*100});
+        //  }//esse for é a primeira animação e é responsaável por desordenar o vetor mostrado na tela. multiplicado por 100, que é a largura do elemento HTML
         var length = this.elementos.length;//variavel tamanho do vetor  
         for (var i = 0; i < length; i++) { 
             tl.to( "#bordacodigo", { y:-41.6666666667*3.5  });//controle da linha que le o codigo

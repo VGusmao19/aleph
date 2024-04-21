@@ -4,7 +4,7 @@ import SelectionSortView from '../views/SelectionSortView.vue'
 import BubbleSortView from '../views/BubbleSortView.vue'
 import InsertionSortView from '../views/InsertionSortView.vue'
 import BuscaLinearView from '../views/BuscaLinearView.vue'
-import BuscaBinariaView from '../views/BuscaLinearView.vue'
+import BuscaBinariaView from '../views/BuscaBinariaView.vue'
 
 
 Vue.use(VueRouter)

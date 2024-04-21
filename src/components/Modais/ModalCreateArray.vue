@@ -24,11 +24,7 @@
           <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  maxlength="2" class="form-control inputs mr-1"  v-for="(elemento, index) in array" :key="index" v-model="array[index]">
           
         </div>
-        Valor Procurado: 
-        <div class="d-flex flex-row justify-content-center">
-          <input  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  maxlength="2" class="form-control inputs mr-1"  v-model="valorProcurado" placeholder="Insira o valor procurado">
-          <!-- adicionando input de valor procurado -->
-        </div>
+        
         
         
 
@@ -63,9 +59,8 @@ export default {
 
   data() {
     return {
-      array:[4,3,2,1],
-      // variavel para valor procurado
-      valorProcurado: 10
+      array:[4,3,2,1]
+
     };
   },
 

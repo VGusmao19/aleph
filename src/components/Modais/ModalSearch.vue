@@ -10,7 +10,7 @@
               text-color-principal
               card-item-result
             ">
-            <h5 class="modal-title mx-auto my-0">Diga os elementos do vetor</h5>
+            <h5 class="modal-title mx-auto my-0">Diga os elementos do vetor e valor para busca </h5>
 
           </div>
 
@@ -59,13 +59,13 @@
 
 
 export default {
-  name: "ModalConsultaBusca",
+  name: "ModalConsulta",
 
   data() {
     return {
       array:[4,3,2,1],
       // variavel para valor procurado
-      valorProcurado: 12
+      valorProcurado: 2
     };
   },
 
@@ -134,7 +134,7 @@ export default {
         for(let i=0;i<this.array.length;i++){
           this.array[i]=Number(this.array[i])
         }
-        // this.bubbleSort(this.array)
+        this.bubbleSort(this.array)
         this.valorProcurado = Number(this.valorProcurado)
         console.log("modal valor procuradoo: "+this.valorProcurado)
         console.log("array do modal "+this.array)
